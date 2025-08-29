@@ -147,8 +147,7 @@ Download the ["cleanup.py"](./files/cleanup.py) file.
 Drag and drop to cloud shell to upload it into your Cloud Shell environment and run the cleanup script:
         ```
         <copy>
-        source .venv/bin/activate   # if not already activated
-        python cleanup.py
+        uv run cleanup.py
         </copy>
         ```
 
