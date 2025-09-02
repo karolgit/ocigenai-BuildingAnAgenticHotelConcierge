@@ -29,6 +29,7 @@ Tasks
 In this task, you'll run the cloud shell to run a script before we test the AI agents. This script will create object storage, knowledge-base and Agents. 
 
 
+
 1.  Setup OCI config file
 
     ## TODO: Include note about _why_ setting up the OCI config file is imporant
@@ -98,6 +99,8 @@ In this task, you'll run the cloud shell to run a script before we test the AI a
     ```
 
 4.  Copy the [setup.py](./files/setup.py) and [TripAdvisorReviewsMultiLang.md](./files/TripAdvisorReviewsMultiLang.md) file to your local machine.Drag and drop inside the Cloud Shell. 
+
+    💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
 
     ![Run Python](./images/drag_drop_files.png)
 

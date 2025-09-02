@@ -18,11 +18,7 @@ In this lab, you will:
 
 ### Dataset
 
-We will use the multi-language TripAdvisor Hotel Reviews dataset from  
-[Zenodo / NIAID ](https://data.niaid.nih.gov/resources?id=zenodo_7967493).  
-
-A trimmed CSV dataset is provided in this repository under:  
-[TripAdvisorReviewsMultiLang.csv](./datasets/TripAdvisorReviewsMultiLang.csv)  
+We will use the trimmed multi-language TripAdvisor Hotel Reviews dataset from [Zenodo / NIAID ](https://data.niaid.nih.gov/resources?id=zenodo_7967493), and a trimmed CSV version of the dataset is also provided in the repository.
 
 Estimated Time:  15-20 minutes
 
@@ -30,7 +26,10 @@ Estimated Time:  15-20 minutes
 
 ## Task 1: Get Your Sample Text
 
-1. Open the CSV ( [TripAdvisorReviewsMultiLang.csv](./files/TripAdvisorReviewsMultiLang.csv) ) dataset. 
+1. Open the CSV ( [TripAdvisorReviewsMultiLang.csv](./datasets/TripAdvisorReviewsMultiLang.csv) ) dataset. 
+
+   💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
+
 2. Copy one **non-English review** (e.g., Vietnamese, ).
 ![Alt text](./images/copyinputdata.png "Input Data")
 

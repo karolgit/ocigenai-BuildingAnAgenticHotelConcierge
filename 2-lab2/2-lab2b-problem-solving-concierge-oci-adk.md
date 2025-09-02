@@ -40,6 +40,7 @@ Before running the agent, follow these setup steps in your Cloud Shell to prepar
 
 2. Download the [concierge_agent.py](./files/concierge_agent.py) and [pyproject.toml](./files/pyproject.toml)  files to your local machine, then upload them to Cloud Shell by dragging and dropping them into the Cloud Shell window.
 
+   💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
    
 3. Install uv, create virtual environment and install dependencies
     ```
@@ -143,6 +144,8 @@ From **language barriers** to **pattern recognition** and now **real-time proble
 At the end of this lab, make sure to clean up the resources created so you don’t consume unnecessary quota or incur additional costs.
 
 Download the ["cleanup.py"](./files/cleanup.py) file.
+
+💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
 
 Drag and drop to cloud shell to upload it into your Cloud Shell environment and run the cleanup script:
         ```

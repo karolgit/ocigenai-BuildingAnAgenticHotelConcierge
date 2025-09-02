@@ -48,7 +48,12 @@ In this workshop, you will learn how to:
 ### Prerequisites  
 
 - Your tenancy must be subscribed to an OCI region with Generative AI service available.  
-  Refer to the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm) for available regions. We will use us-chicago-1 region for this lab.
+  Refer to the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/home.htm) for available regions. We will use us-chicago-1 region for this lab. 
+  
+  *Note: If you use your own tenancy, make sure you are subscribed to us-chicago-1 region.*
+
+  ![OCI Generative AI Services](./images/oci_chicago_subscribe.png "OCI Chicago Subscribe") 
+
 - Familiarity with Oracle Cloud Infrastructure (OCI) is helpful.  
 
 You may now proceed to the next lab.
