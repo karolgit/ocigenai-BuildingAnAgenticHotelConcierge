@@ -31,9 +31,9 @@ In this task, you'll run the cloud shell to run a script before we test the AI a
 
 
 1.  Setup OCI config file
-
-    ## TODO: Include note about _why_ setting up the OCI config file is imporant
-    ## TODO: Include note/mention about subscribing to CHICAGO region
+        
+    Setting up the OCI config file is important because it tells OCI tools who you are and which region to use.  
+    For this workshop, we’ll set the region to `us-chicago-1` since Generative AI is available there.  
     
     Open Cloud Shell from the top-right corner of the OCI Console, 
 
