@@ -37,7 +37,7 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
 
     ## Option 1: Automatic Setup (Script)
 
-    Download the [`setup_user_api_key.py`](./files/setup_user_api_key.py) script, drag and drop it into Cloud Shell, and run below python script to set up your OCI config automatically.  
+    Download the [`setup_user_api_key.py`](./files/setup_user_api_key.py) script, drag and drop it into Cloud Shell, and run below script to set up your OCI config automatically.  
 
     💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
 
@@ -46,6 +46,7 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
         
     ```bash
     <copy>
+    mkdir .oci 
     python setup_user_api_key.py
     </copy>
     ```
