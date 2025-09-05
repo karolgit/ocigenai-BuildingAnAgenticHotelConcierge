@@ -24,28 +24,45 @@ Estimated Time:  45-50 minutes
 
 Tasks
 ---
-
-## Task 1: Create ObjectStorage, Knowledge-base and Agent
-In this task, you'll run the cloud shell to run a script before we test the AI agents. This script will create object storage, knowledge-base and Agents. 
-
-
-
-1.  Setup OCI config file
+## Task 1: Setup OCI config file
         
-    Setting up the OCI config file is important because it tells OCI tools who you are and which region to use.  
-    For this workshop, we’ll set the region to `us-chicago-1` since Generative AI is available there.  
+Setting up the OCI config file is important because it tells OCI tools who you are and which region to use.  
+For this workshop, we’ll set the region to `us-chicago-1` since Generative AI is available there.  
     
-    Open Cloud Shell from the top-right corner of the OCI Console, 
+1.  Open Cloud Shell from the top-right corner of the OCI Console, 
 
     ![Open Cloud Shell](./images/open_cloud_shell.png "Open Cloud Shell")
 
-    then run the following command to start the guided setup:
+2.  You can set up your OCI CLI configuration in two ways. Choose either the automatic setup or the manual setup (only one is needed) 
+
+    ## Option 1: Automatic Setup (Script)
+
+    Download the [`setup_user_api_key.py`](./files/setup_user_api_key.py) script, drag and drop it into Cloud Shell, and run below python script to set up your OCI config automatically.  
+
+    💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
+
+    ![Run Python](./images/setup_oci_config_automatic.png)  
+
+        
+    ```bash
+    <copy>
+    python setup_user_api_key.py
+    </copy>
+    ```
+    
+
+
+    ## Option 2: Manual Setup (Script)
+
+    Run the following command for the interactive, step-by-step OCI config.  
+
     
     ```bash
     <copy>
     oci setup config
     </copy>
     ```
+
 
     Follow the prompts and enter the required details when asked:
     -   Enter a location for your config [Hit Enter]
@@ -90,7 +107,11 @@ In this task, you'll run the cloud shell to run a script before we test the AI a
     
     ![Open Namespace Output Shell](./images/oci_ns_output.png "Open Namespace Output Shell")  
 
-3.  Run the following command to check if the region is set to us-chicago-1. 
+## Task 2: Create ObjectStorage, Knowledge-base and Agent
+
+In this task, you'll run a script in cloud shell before we test the AI agents. This script will create object storage, knowledge-base and Agents. 
+
+1.  Run the following command to check if the region is set to us-chicago-1. 
 
     ```bash
     <copy>
@@ -98,41 +119,51 @@ In this task, you'll run the cloud shell to run a script before we test the AI a
     </copy>
     ```
 
-4.  Copy the [setup.py](./files/setup.py) and [TripAdvisorReviewsMultiLang.md](./files/TripAdvisorReviewsMultiLang.md) file to your local machine.Drag and drop inside the Cloud Shell. 
+2.  Copy the [setup.py](./files/setup.py) and [TripAdvisorReviewsMultiLang.md](./files/TripAdvisorReviewsMultiLang.md) file to your local machine.Drag and drop inside the Cloud Shell. 
 
     💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
 
     ![Run Python](./images/drag_drop_files.png)
 
-5.  Check python script >3.9 and run setup.py in CloudShell.
+3.  Run setup.py in CloudShell.
 
-    *Note: If you are deploying resources into a compartment other than the root compartment, you need to provide the Compartment OCID, which you can find in the OCI Console by clicking your Profile (email) on top right, selecting Compartments from the side menu, choosing the appropriate compartment, and copying its OCID.*
+    If you are deploying resources into a compartment other than the root compartment, you need to provide the Compartment OCID.
+    You can find it in the OCI Console by:
 
+    -   Clicking your profile (email) in the top-right corner.
+    -   Selecting Compartments from the side menu.
+    -   Choosing the appropriate compartment and copy its OCID.
+
+    Choose one of the two options below and do not run both:
+
+    ## Option 1: Provide the compartment OCID directly
     ```bash
     <copy>
-    python -V
+    python setup.py --compartment-id YOUR-COMPARTMENT-OCID
+    </copy>
+    ```
+    ⚠️ Important: Replace *YOUR-COMPARTMENT-OCID* with the OCID from the OCI Console.
+    
+    ![Run Python to Create ObjectStorage Knowledge-base Agents](./images/create_storage_kb_agents_for_compid.png "Run Python to Create ObjectStorage Knowledge-base Agents")
+
+
+    ## Option 2: Use the default profile from config (no OCID needed)
+    ```bash
+    <copy>
     python setup.py
     </copy>
-    ```
-    OR
+    ``` 
+    ![Run Python to Create ObjectStorage Knowledge-base Agents](./images/create_storage_kb_agents.png "Run Python to Create ObjectStorage Knowledge-base Agents").   
 
-    ```bash
-    <copy>
-    python -V
-    python setup.py --compartment-id <your-compartment-ocid-here>
-    </copy>
-    ```
 
-    ![Run Python to Create ObjectStorage Knowledge-base Agents](./images/create_storage_kb_agents.png "Run Python to Create ObjectStorage Knowledge-base Agents")
+*Note:* 
 
-    *Note:* 
+*If you run the script in your own tenancy and if you get any error on limits, you need to request to increase the Generative-Agent count, Knowledgebase count and Agent Endpoint count limits.*
 
-    *If you run the script in your own tenancy and if you get any error on limits, you need to request to increase the Generative-Agent count, Knowledgebase count and Agent Endpoint count limits.*
+![Limit Increase](./images/limit_increase_1.png "Limit Increase")
+![Increase the Limit for Generative-Agent count, Knowledgebase count and Agent Endpoint count limits](./images/limit_increase_2.png "Increase the Limit for Generative-Agent count, Knowledgebase count and Agent Endpoint count limits")
 
-    ![Limit Increase](./images/limit_increase_1.png "Limit Increase")
-    ![Increase the Limit for Generative-Agent count, Knowledgebase count and Agent Endpoint count limits](./images/limit_increase_2.png "Increase the Limit for Generative-Agent count, Knowledgebase count and Agent Endpoint count limits")
-
-## Task 2:  View your newly created resources
+## Task 3:  View your newly created resources
 
 1.  View the newly created storage bucket and the uploaded dataset in the UI.
        - Click on the hamburger menu in the upper left of the console to open the menu
@@ -159,7 +190,7 @@ In this task, you'll run the cloud shell to run a script before we test the AI a
 
     ![Newly created Agents](./images/new_agents_created.png "Newly created Agents")    
 
-## Task 3: Test Your RAG agent
+## Task 4: Test Your RAG agent
 
  1. Once the agent is active, click Launch chat. Test its knowledge from the dataset to
     confirm the RAG tool is working:
