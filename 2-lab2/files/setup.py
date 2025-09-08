@@ -23,10 +23,16 @@ Prerequisites:
 import argparse
 import oci
 from pathlib import Path
+from datetime import datetime
 
 OCIDS_FILE = "GENERATED_OCIDS.txt"
-BUCKET_NAME = "ai-workshop-labs-datasets"
+#BUCKET_NAME = "ai-workshop-labs-datasets"
 FILE_TO_UPLOAD = "TripAdvisorReviewsMultiLang.md"
+
+def generate_unique_bucket_name(base_name="ai-workshop-labs-datasets"):
+    """Generate a unique bucket name using timestamp."""
+    timestamp = datetime.utcnow().strftime("%Y%m%d%H%M%S")
+    return f"{base_name}-{timestamp}"
 
 
 def create_bucket(os_client, ns, compartment_id, bucket_name):
@@ -213,6 +219,9 @@ def main():
     agent_client = oci.generative_ai_agent.GenerativeAiAgentClient(config)
     namespace = os_client.get_namespace().data
     print(f"✅ Object Storage namespace: {namespace}")
+
+    # Generate a unique bucket name
+    BUCKET_NAME = generate_unique_bucket_name()
 
     print("\n📦 STEP 1: Setting up Object Storage")
     print("-" * 40)
