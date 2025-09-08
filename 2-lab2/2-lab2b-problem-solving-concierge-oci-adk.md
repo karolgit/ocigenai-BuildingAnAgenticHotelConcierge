@@ -38,11 +38,7 @@ Before running the agent, follow these setup steps in your Cloud Shell to prepar
     </copy>
     ```
 
-2. Download the [concierge_agent.py](./files/concierge_agent.py) and [pyproject.toml](./files/pyproject.toml)  files to your local machine, then upload them to Cloud Shell by dragging and dropping them into the Cloud Shell window.
-
-   💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
-   
-3. Install uv, create virtual environment and install dependencies
+2. Install uv, create virtual environment and install dependencies
     ```
     <copy>
     curl -LsSf https://astral.sh/uv/install.sh | sh # install uv
@@ -52,7 +48,7 @@ Before running the agent, follow these setup steps in your Cloud Shell to prepar
     </copy>
     ```
     
-4. Set environment variables
+3. Set environment variables
     -   Create an account in [https://www.tavily.com](https://www.tavily.com) and signup and get the API Key.
 
         ![Run deployment script](./images/tavily_signup.png)
@@ -73,9 +69,10 @@ Before running the agent, follow these setup steps in your Cloud Shell to prepar
     export KNOWLEDGE_BASE_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     </copy>
     ```
-5. Run the concierge_agent.py script
+4. Run the concierge_agent.py script
     ```
     <copy>
+    cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
     uv run concierge_agent.py
     </copy>
     ```
@@ -83,7 +80,8 @@ Before running the agent, follow these setup steps in your Cloud Shell to prepar
 This will start the agent and allow you to test its Retrieval Augmented Generation (RAG) capabilities.
 
 
-![Run deployment script](./images/run_python_concierge_agent.png)
+![Run deployment script](./images/run_python_concierge_agent_file.png)
+
 
 The script will use the **OCI Agent Development Kit (ADK)** to provision all necessary resources in your OCI tenancy.  
 
@@ -150,6 +148,7 @@ Download the ["cleanup.py"](./files/cleanup.py) file.
 Drag and drop to cloud shell to upload it into your Cloud Shell environment and run the cleanup script:
         ```
         <copy>
+        cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
         uv run cleanup.py
         </copy>
         ```

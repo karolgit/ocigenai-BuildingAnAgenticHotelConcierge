@@ -37,20 +37,17 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
 
     ## Option 1: Automatic Setup (Script)
 
-    Download the [`setup_user_api_key.py`](./files/setup_user_api_key.py) script, drag and drop it into Cloud Shell, and run below script to set up your OCI config automatically.  
-
-    💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
-
-    ![Run Python](./images/setup_oci_config_automatic.png)  
+    Run the script below to set up your OCI config automatically:
 
         
     ```bash
     <copy>
-    mkdir .oci 
+    git clone https://github.com/karolgit/ocigenai-BuildingAnAgenticHotelConcierge-files.git
+    mkdir .oci
+    cd ocigenai-BuildingAnAgenticHotelConcierge-files
     python setup_user_api_key.py
     </copy>
     ```
-    
 
 
     ## Option 2: Manual Setup (Script)
@@ -112,21 +109,7 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
 
 In this task, you'll run a script in cloud shell before we test the AI agents. This script will create object storage, knowledge-base and Agents. 
 
-1.  Run the following command to check if the region is set to us-chicago-1. 
-
-    ```bash
-    <copy>
-    awk -F= '/^region/ {print $2}' ~/.oci/config
-    </copy>
-    ```
-
-2.  Copy the [setup.py](./files/setup.py) and [TripAdvisorReviewsMultiLang.md](./files/TripAdvisorReviewsMultiLang.md) file to your local machine.Drag and drop inside the Cloud Shell. 
-
-    💡 Tip: You can right-click on the link/file and select “Save As” (or “Save link as”) to download and save it to your local folder.
-
-    ![Run Python](./images/drag_drop_files.png)
-
-3.  Run setup.py in CloudShell.
+1.  Run setup.py in CloudShell.
 
     If you are deploying resources into a compartment other than the root compartment, you need to provide the Compartment OCID.
     You can find it in the OCI Console by:
@@ -140,6 +123,7 @@ In this task, you'll run a script in cloud shell before we test the AI agents. T
     ## Option 1: Provide the compartment OCID directly
     ```bash
     <copy>
+    cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
     python setup.py --compartment-id YOUR-COMPARTMENT-OCID
     </copy>
     ```
@@ -151,6 +135,7 @@ In this task, you'll run a script in cloud shell before we test the AI agents. T
     ## Option 2: Use the default profile from config (no OCID needed)
     ```bash
     <copy>
+    cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
     python setup.py
     </copy>
     ``` 
