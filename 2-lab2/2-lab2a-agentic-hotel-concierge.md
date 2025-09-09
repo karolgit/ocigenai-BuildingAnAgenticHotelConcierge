@@ -29,9 +29,13 @@ Tasks
 Setting up the OCI config file is important because it tells OCI tools who you are and which region to use.  
 For this workshop, we’ll set the region to `us-chicago-1` since Generative AI is available there.  
     
-1.  Open Cloud Shell from the top-right corner of the OCI Console, 
+1.  Change your region to us-chicago-1 by selecting it from the region dropdown at the top-right corner. Then open Cloud Shell from the top-right corner of the OCI Console.
+
+    *Note: If you use your own tenancy, make sure you are subscribed to us-chicago-1 region.*
 
     ![Open Cloud Shell](./images/open_cloud_shell.png "Open Cloud Shell")
+
+
 
 2.  You can set up your OCI CLI configuration in two ways. Choose either the automatic setup or the manual setup (only one is needed) 
 
@@ -44,7 +48,7 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
     <copy>
     git clone https://github.com/karolgit/ocigenai-BuildingAnAgenticHotelConcierge-files.git
     mkdir .oci
-    cd ocigenai-BuildingAnAgenticHotelConcierge-files
+    cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
     python setup_user_api_key.py
     </copy>
     ```
@@ -112,15 +116,15 @@ In this task, you'll run a script in cloud shell before we test the AI agents. T
 1.  Run setup.py in CloudShell.
 
     If you are deploying resources into a compartment other than the root compartment, you need to provide the Compartment OCID.
-    You can find it in the OCI Console by:
 
-    -   Clicking your profile (email) in the top-right corner.
-    -   Selecting Compartments from the side menu.
-    -   Choosing the appropriate compartment and copy its OCID.
-
-    Choose one of the two options below and do not run both:
+    *Note: Choose one of the two options below and do not run both:*
 
     ## Option 1: Provide the compartment OCID directly
+
+    You can find the compartment OCID in the OCI Console by clicking your profile icon in the top-right corner, selecting your email, choosing Compartments from the side menu, and then selecting the appropriate compartment to copy its OCID.
+
+    ![Copy compartment OCID](./images/copy_compartment_ocid.png "Copy compartment OCID")
+    
     ```bash
     <copy>
     cd ~/ocigenai-BuildingAnAgenticHotelConcierge-files
