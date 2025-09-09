@@ -124,6 +124,9 @@ In this task, you'll run a script in cloud shell before we test the AI agents. T
     You can find the compartment OCID in the OCI Console by clicking your profile icon in the top-right corner, selecting your email, choosing Compartments from the side menu, and then selecting the appropriate compartment to copy its OCID.
 
     ![Copy compartment OCID](./images/copy_compartment_ocid.png "Copy compartment OCID")
+
+    ⚠️ Important: Before running the below script in Cloud Shell, replace *YOUR-COMPARTMENT-OCID* with the compartment OCID copied from the OCI Console.
+
     
     ```bash
     <copy>
@@ -131,7 +134,6 @@ In this task, you'll run a script in cloud shell before we test the AI agents. T
     python setup.py --compartment-id YOUR-COMPARTMENT-OCID
     </copy>
     ```
-    ⚠️ Important: Replace *YOUR-COMPARTMENT-OCID* with the OCID from the OCI Console.
     
     ![Run Python to Create ObjectStorage Knowledge-base Agents](./images/create_storage_kb_agents_for_compid.png "Run Python to Create ObjectStorage Knowledge-base Agents")
 
