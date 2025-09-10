@@ -12,8 +12,9 @@ Estimated Time: 15–20 minutes
 In this lab, you will:
 
 - Use OCI Generative AI to **summarize reviews** in their original language.
-- **Analyze sentiment** (Positive, Negative, or Neutral).
-- **Translate reviews** into English for hotel management.
+- **Analyze sentiment** understand if guest's review is either Positive, Negative, or Neutral.
+- **Translate reviews** from non-native languages to staff's native language (eg: English)
+- **Respond** to reviews with full context and sentiment understanding
 - Understand how AI improves **response times**, **guest satisfaction**, and **revenue**.
 
 ### Dataset
@@ -55,7 +56,9 @@ Estimated Time:  15-20 minutes
 
    ```
    <copy>
-   Analyze the following hotel review. First, provide a one-paragraph summary of the review in its original language. After the summary, identify the sentiment as Positive, Negative, or Neutral.
+   Analyze the hotel review below.
+   Provide a one-paragraph summary of the review in its original language.
+   In English, identify the sentiment as Positive, Negative, or Neutral.
 
    Here is the review:
    [PASTE THE NON-ENGLISH REVIEW TEXT HERE]
@@ -66,7 +69,11 @@ Estimated Time:  15-20 minutes
 
    ```
    <copy>
-   Analyze the following hotel review. First, provide a one-paragraph summary of the review in its original language. After the summary, identify the sentiment as Positive, Negative, or Neutral.
+   Analyze the hotel review below.
+   Provide a one-paragraph summary of the review in its original language.
+   In English, identify the sentiment as Positive, Negative, or Neutral.
+
+   Here is the review:
 - Nằm ở số 4 Tôn Đức Thắng (trong khu villa cao cấp) và đối diện sông Trà Khúc, cách trung tâm thành phố Quảng Ngãi khoảng 2-3 km. Khách sạn Hana Riverside là một lựa chọn tuyệt vời cho sự riêng tư. - Đây thực chất là 1 dạng villa và kinh doanh các phòng
    </copy>
    ```
@@ -82,45 +89,49 @@ Estimated Time:  15-20 minutes
 
 ## Task 4: Translate the Review
 
-1. Start a new chat in the Playground.  
+1. Use the same chat from Task 4
 2. Use the following prompt and click  **Submit** to get a full English translation:
 
    ```
    <copy>
-   Translate the following hotel review into English:
-
-   [PASTE THE SAME NON-ENGLISH REVIEW TEXT HERE]
-   </copy>
-   ```
-
-   (e.g.)
-   ```
-   <copy>
-   Translate the following hotel review into English.
-- Nằm ở số 4 Tôn Đức Thắng (trong khu villa cao cấp) và đối diện sông Trà Khúc, cách trung tâm thành phố Quảng Ngãi khoảng 2-3 km. Khách sạn Hana Riverside là một lựa chọn tuyệt vời cho sự riêng tư. - Đây thực chất là 1 dạng villa và kinh doanh các phòng
+   Translate the hotel review into English
    </copy>
    ```
 
    The model outputs the translated summary in  **English language**  
    ![Alt text](./images/TranslatedText.png "Output - TranslatedText")
 
+## Task 4.1: Generate a response
+1. Use the same chat from Task 4
+2. Use the following prompt and click  **Submit** to get a response using the original user review and sentiment
+
+   ```
+   <copy>
+   Based on the guest review and the sentiment, generate a response for Maria, on behalf of the hotel
+   </copy>
+   ```
+   
 ### Conclusion & Value
 
-In this lab, you have:
+Maria and her team used to spend hours every day reading reviews in different languages, translating them, trying to understand what guests were really saying, and then writing thoughtful responses—all while struggling to keep up with the volume.  
 
-- **Summarized** a review in its native language.  
-- **Analyzed** guest sentiment for faster prioritization.  
-- **Translated** the review into English for management use.  
+- **Analyzed** guest reviews in foreign languages and identified sentiment  
+- **Translated** reviews into the team’s native language (e.g., English)  
+- **Responded** with clear, empathetic messages that reflected full understanding of the guest’s feedback  
 
-### Business Impact
+### Business Impact  
 
-- **Time savings**: Responses in minutes, not days.  
-- **Accuracy**: AI captures nuance and cultural context.  
-- **Scalability**: Handle hundreds of reviews daily without additional staff.  
+- **Time savings**: Responses go out in minutes instead of days  
+- **Accuracy**: AI captures nuance and cultural context even in non-native languages  
+- **Automation**: Fewer mistakes, less manual work, and more time for staff to focus on guests and operations  
+- **Scalability**: Handles growing review volume without adding headcount, while improving response times  
+
+In this Lab, we delivered Maria and her team a simple solution that directly impacts the company’s bottom line—better service for guests, improved working conditions for employees, and higher returns on investment.  
 
 ### What's Next
+In **Lab 2**, you will build an **AI Concierge** capable of analyzing thousands of reviews at once, uncovering patterns, and recommending actions.  
+This step moves you beyond single-review analysis into **strategic intelligence** for hospitality management powered by OCI Generative AI Agents.
 
-In Lab 2, you will build an AI Concierge** to analyze thousands of reviews at once, discover patterns, and recommend actions. This step takes you from single-review analysis to strategic intelligence for hospitality management.
 
 ---
 
