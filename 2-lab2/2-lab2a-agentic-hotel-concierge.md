@@ -67,13 +67,14 @@ For this workshop, we’ll set the region to `us-chicago-1` since Generative AI 
 
 
     Follow the prompts and enter the required details when asked:
-    -   Enter a location for your config [Hit Enter]
-    -   Tenancy OCID (Enter your tenancy OCID, see screenshots below)
-    -   User OCID (enter our user OCID, see screenshots below)
-    -   Region (enter us-chicago-1)
-    -   Enter 'Y' to generate API signing Key
-    -   Path to the directory of the public and private key files (press Enter to let it generate automatically)
-    -   Enter Passphrase and reconfirm as "N/A"
+    -   Location for your config, just _hit Enter_
+    -   Tenancy OCID, provide your tenancy OCID (see screenshots below) then _hit Enter_
+    -   User OCID, provide your user OCID, see screenshots below) then _hit Enter_
+    -   Region, type us-chicago-1 then _hit Enter_
+    -   API Signing Key, just type 'Y' _hit Enter_
+    -   Path to the directory of the public and private key files, just _hit Enter_
+    -   Enter Passphrase type "N/A" and _hit Enter_
+    -   Reconfirm Passphrase type "N/A" and _hit Enter_
 
 
     ![OCI Setup Config](./images/oci_setup_config.png "OCI Setup Config")    
