@@ -27,7 +27,7 @@ Estimated Time:  15-20 minutes
 
 ## Task 1: Get Your Sample Text
 
-1. Right-click the [TripAdvisorReviewsMultiLang.csv](./datasets/TripAdvisorReviewsMultiLang.csv) link, select “Save As” to download it to  your local folder. Open the downloaded CSV file in Microsoft Excel from your local folder.
+1. Right-click the [TripAdvisorReviewsMultiLang.csv](./datasets/TripAdvisorReviewsMultiLang.csv "download") link, select “Save As” to download it to  your local folder. Open the downloaded CSV file in Microsoft Excel from your local folder.
 
 2. Copy one **non-English review** (e.g., Vietnamese, ).
 ![Alt text](./images/copyinputdata.png "Input Data")
